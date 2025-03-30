@@ -9,7 +9,8 @@ function handleMudarNotaAvaliacao(nota){
 }
 
   return(
-    <div className="bg-gradient-dark text-white mx-6 p-6 ">
+    notaAvaliacao === 0 ? (
+      <div className="bg-gradient-dark text-white mx-6 p-6 ">
       <div className="bg-dark-blue w-fit p-4 rounded-full rounded 2xl mb-4 font-overpass">
         <img src={iconStar} alt="icon star" />
       </div>
@@ -27,5 +28,10 @@ function handleMudarNotaAvaliacao(nota){
 
       <button className="bg-orange w-full uppercase tracking-1 font-bold rounded-3xl text-sm py-3">Submit</button>
     </div>
+    ) : ( 
+      <div className="bg-gradient-drak text-white mx-6 p-6 rounded-2xl font-overpass">
+        <p>{notaAvaliacao}</p>
+      </div>
+    )
   )
 }
