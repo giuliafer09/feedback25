@@ -1,4 +1,5 @@
 import iconStar from  "./assets/icon-star.svg"
+import illustrationThankYou from "./assets/illustration-thank-you.svg"
 import { useState} from "react"
 
 export function App(){
@@ -39,8 +40,13 @@ function handleSubmit(){
       <button onClick={handleSubmit} className="bg-orange w-full uppercase tracking-1 font-bold rounded-3xl text-sm py-3">Submit</button>
     </div>
     ) : ( 
-      <div className="bg-gradient-dark text-white mx-6 p-6 roundend-full rounded-2xl font-overpass">
-        <p>{notaAvaliacao}</p>
+      <div className="bg-gradient-dark text-white mx-6 p-6 rounded-full rounded-2xl font-overpass">
+        <img className="mx-auto mb-6" src={illustrationThankYou} alt="illustration Thank You" />
+      
+      <p className="text-orange bg-dark-blue w-fit mx-auto px-3 py-1.25 rounded-3xl mb-6 ">You selected {notaAvaliacao} out of 5</p>
+
+      <h1 className="text-2xl font-bold mb-2.5 text-center">Thank You!</h1>
+      <p className="text-sm text-light-grey leading-1 text-center "><p className="text-sm text-light-grey mb-6 leading-1 ">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p></p>
       </div>
     )
   )
